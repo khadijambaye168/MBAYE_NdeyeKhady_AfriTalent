@@ -15,8 +15,130 @@ rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"> 
 </head>
  <body> 
+
+  <!-- Navigation Bootstrap commune a toutes les pages --> 
+    <nav class="navbar navbar-expand-lg"> 
+     <div class="container"> 
+        <a class="navbar-brand" href="index.html">AfriTalent</a> 
+           <button class="navbar-toggler" type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navMenu" 
+              aria-controls="navMenu" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation"> 
+
+            </button> 
+        <div class="collapse navbar-collapse" id="navMenu"> 
+            <ul class="navbar-nav ms-auto"> 
+            <li class="nav-item"><a class="nav-link active" 
+href="index.html">Accueil</a></li> 
+            <li class="nav-item"><a class="nav-link" 
+href="freelances.html">Freelances</a></li> 
+            <li class="nav-item"><a class="nav-link" 
+href="tarifs.html">Tarifs</a></li> 
+            <li class="nav-item"><a class="nav-link" href="about.html">A 
+propos</a></li> 
+             <li class="nav-item"><a class="nav-link" 
+href="Blog.html">Blog</a></li>  
+            <li class="nav-item"><a class="nav-link" 
+href="contact.html">Contact</a></li> 
+            </ul> 
+        </div>
+        <div>
+      <a href="freelances.html">Rejoindre AfriTalent</a>
+   </div>  
+      </div> 
+    </nav> 
     <!-- Le contenu de la page sera ajoute ici --> 
-     
+     <div class="container my-5">
+  <h2 class="mb-4">Contactez-nous</h2>
+  
+  <div class="row">
+    
+    <!-- Colonne Formulaire -->
+    <div class="col-md-7">
+      <form id="contactForm" novalidate>
+        
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="nom" required>
+            <div class="error-message" id="error-nom">Le nom est requis</div>
+          </div>
+          
+          <div class="col-md-6 mb-3">
+            <label for="prenom" class="form-label">Prénom</label>
+            <input type="text" class="form-control" id="prenom" required>
+            <div class="error-message" id="error-prenom">Le prénom est requis</div>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="email" required>
+          <div class="error-message" id="error-email">Entrez un email valide</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="sujet" class="form-label">Sujet</label>
+          <select class="form-select" id="sujet" required>
+            <option value="">Choisissez un sujet</option>
+            <option value="question">Question générale</option>
+            <option value="support">Support technique</option>
+            <option value="devis">Demande de devis</option>
+            <option value="autre">Autre</option>
+          </select>
+          <div class="error-message" id="error-sujet">Veuillez choisir un sujet</div>
+        </div>
+
+        <div class="mb-3">
+          <label for="message" class="form-label">Message</label>
+          <textarea class="form-control" id="message" rows="5" required></textarea>
+          <div class="error-message" id="error-message">Le message doit contenir au moins 20 caractères</div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Envoyer</button>
+        
+        <!-- Message de succès -->
+        <div class="alert alert-success mt-3 success-message" id="successMessage">
+          Message envoyé avec succès ! Nous vous répondrons rapidement.
+        </div>
+      </form>
+    </div>
+
+    <!-- Colonne Infos de contact -->
+    <div class="col-md-5">
+      <div class="card bg-light">
+        <div class="card-body">
+          <h5 class="card-title">Informations de contact</h5>
+          <p class="card-text">
+            <strong>Email :</strong> khadijambaye@gmail.com<br>
+            <strong>Téléphone :</strong> +221 78 200 36 63<br>
+            <strong>Adresse :</strong> Liberté 5/A<br>
+            Dakar, SENEGAL
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carte Google Maps -->
+  <div class="mt-5">
+    <h5 class="mb-3">Nous trouver</h5>
+    <div class="ratio ratio-16x9">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.952912260219!2d-1.533048625239!3d6.688857893522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb96f349e85d7f%3A0x1a1e1e1e1e1e1e1e!2ssenegali%2C%20Dakar!5e0!3m2!1sfr!2sgh!4v1234567890">
+      </iframe>
+      </iframe>
+    </div>
+  </div>
+</div>
+<footer> 
+<div> 
+<p>&copy; 2025 AfriTalent. Tous droits reserves.</p> 
+</div> 
+</footer>
     
     <!-- Bootstrap 5 via CDN : script JavaScript --> 
      

@@ -15,8 +15,208 @@ rel="stylesheet">
     <link rel="stylesheet" href="css/style.css"> 
 </head>
  <body> 
+
+  <!-- Navigation Bootstrap commune a toutes les pages --> 
+    <nav class="navbar navbar-expand-lg"> 
+     <div class="container"> 
+        <a class="navbar-brand" href="index.html">AfriTalent</a> 
+           <button class="navbar-toggler" type="button" 
+              data-bs-toggle="collapse" 
+              data-bs-target="#navMenu" 
+              aria-controls="navMenu" 
+              aria-expanded="false" 
+              aria-label="Toggle navigation"> 
+
+            </button> 
+        <div class="collapse navbar-collapse" id="navMenu"> 
+            <ul class="navbar-nav ms-auto"> 
+            <li class="nav-item"><a class="nav-link active" 
+href="index.html">Accueil</a></li> 
+            <li class="nav-item"><a class="nav-link" 
+href="freelances.html">Freelances</a></li> 
+            <li class="nav-item"><a class="nav-link" 
+href="tarifs.html">Tarifs</a></li> 
+            <li class="nav-item"><a class="nav-link" href="about.html">A 
+propos</a></li> 
+           <li class="nav-item"><a class="nav-link" 
+href="Blog.html">Blog</a></li>  
+            <li class="nav-item"><a class="nav-link" 
+href="contact.html">Contact</a></li> 
+            </ul> 
+        </div>
+        <div>
+      <a href="freelances.html">Rejoindre AfriTalent</a>
+   </div>  
+      </div> 
+    </nav> 
     <!-- Le contenu de la page sera ajoute ici --> 
-     
+     <div class="container py-4">
+      <h1 class="mb-4 text-center">Catalogue de freelances</h1>
+
+  <!-- Barre de filtres -->
+  <div class="mb-4">
+    <label for="filtreCategorie" class="form-label">Filtrer par catégorie :</label>
+    <select id="filtreCategorie" class="form-select w-25">
+      <option value="all">Toutes</option>
+      <option value="dev">Développeur</option>
+      <option value="design">Designer</option>
+      <option value="redac">Rédacteur</option>
+    </select>
+  </div>
+
+    
+  <!-- Grille de profils -->
+
+  <div class="row g-4" id="freelanceGrid">
+    
+    <!-- 1. Dev -->
+    <div class="col-12 col-md-6 col-lg-4 freelance-card show" data-category="developpeur">
+      <div class="card h-100 shadow-sm">
+        <img src="https://storage.letudiant.fr/mediatheque/letudiant/9/5/2979195-developpeur-ia-632x421.webp" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">Aïcha Diallo</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Développeur</h6>
+          <p class="card-text">Le développeur en intelligence artificielle conçoit des programmes capables de simuler l’intelligence humaine pour résoudre des problèmes concrets.</p>
+          <p><strong>35€/h</strong></p>
+          <p class="mb-2"><span class="star">★★☆</span> 4.2</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div
+
+    !-- 2. Designer -->
+    <div class="col-12 col-md-6 col-lg-4 freelance-card show" data-category="designer">
+      <div class="card h-100 shadow-sm">
+        <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/FxRhbHl2W6QjuM5ef3QJi/8769f9cb620914f4e9211b4d54385ce0/ux-designer.jpeg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">Gabriel fabre</h5>
+          <h6 class="card-subtitle mb-2 text-muted">UI/UX Designer</h6>
+          <p class="card-text">Les UX designers cherchent à créer des produits et des services ressentis comme faciles, efficaces et agréables à utiliser.</p>
+          <p><strong>40€/h</strong></p>
+          <p class="mb-2"><span class="star">★★★</span> 4.8</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Redacteur -->
+    <div class="col-12 col-md-6 col-lg-4 freelance-card show" data-category="redacteur">
+      <div class="card h-100 shadow-sm">
+        <img src="https://www.onisep.fr/var/onisep/storage/images/_aliases/dso_grid_8_columns/4/4/6/4/9564644-8-fre-FR/cc2501878ae8-redacteur-en-chef.jpg.webp" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">noah lopez</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Redacteur</h6>
+          <p class="card-text"></p>
+          <p><strong>30€/h</strong>Au sein d'un journal, d'une radio, d'une télévision ou d'un site web d'information, le rédacteur en chef est celui qui choisit des sujets à traiter. Toute idée d'article lui est obligatoirement soumise. </p>
+          <p class="mb-2"><span class="star">★★★☆</span> 3.9</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Dev -->
+    <div class="col-12 col-md-6 col-lg-4 freelance-card show" data-category="devellopeur">
+      <div class="card h-100 shadow-sm">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJJ46RoTluUJCE9wQLWag1gOT8_N-n3DOqXA&s" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">Omar Sy</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Développeur </h6>
+          <p class="card-text">Maîtrise des langages (comme JavaScript, Python, Java) et des bases de données.
+             : Réaliser une veille technologique continue pour suivre l'évolution des outils et de l'IA.
+          </p>
+          <p><strong>45€/h</strong></p>
+          <p class="mb-2"><span class="star">★★☆</span> 4.5</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Designer -->
+    <div class="col-12 col-md-6 col-lg-4 freelance-card show" data-category="designer">
+      <div class="card h-100 shadow-sm">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfIv-nSj475bzUyDA3rz0EUDajGQz6HJjw2A&s" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">Aminata Aidara</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Graphiste Brand Identity</h6>
+          <p class="card-text">Logos, chartes graphiques et supports print pour startups.</p>
+          <p><strong>28€/h</strong></p>
+          <p class="mb-2"><span class="star">★★☆</span> 4.3</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6.redacteur-->
+    <div class="col-12 col-md-6 col-lg-4 freelance-card show" data-category="redact>
+      <div class="card h-100 shadow-sm">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCph1F8EwQVNFsOZ6CVmaxUKu9yYK0xvl6MA&s" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">Ibrahim Diop</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Rédacteur SEO</h6>
+          <p class="card-text">Articles optimisés SEO en FR/EN. +50 sites positionnés top 3.</p>
+          <p><strong>25€/h</strong></p>
+          <p class="mb-2"><span class="star">★★★</span> 4.7</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Developpeur -->
+    <div class="col-12 col-md-6 col-lg-4 freelance-card show" data-category="devellopeur">
+      <div class="card h-100 shadow-sm">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTrs6WXaSCEh_XUE1tz10WiqoxvgSG_M2a8g&s" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">Léa Kouassi</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Data Analyst Python</h6>
+          <p class="card-text">Analyse de données, dashboards Power BI et automatisation.</p>
+          <p><strong>50€/h</strong></p>
+          <p class="mb-2"><span class="star">★★☆</span> 4.6</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Designer -->
+    <div class="col-12 col-md-6 col-lg-4 freelance-card show" data-category="designer">
+      <div class="card h-100 shadow-sm">
+        <img src="https://i.pinimg.com/1200x/c3/65/b8/c365b8a560418cf02dda44994d809d60.jpg" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">Karim Faye</h5>
+          <h6 class="card-subtitle mb-2 text-muted"> Designer</h6>
+          <p class="card-text">Animations 2D, vidéos explicatives et montages After Effects.</p>
+          <p><strong>38€/h</strong></p>
+          <p class="mb-2"><span class="star">★★☆</span> 4.4</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9. redacteur-->
+    <div class="col-12 col-md-6 col-lg-4 freelance-card show" data-category="redact>
+      <div class="card h-100 shadow-sm">
+        <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXowjnGZQcVJQsUhsiR6p-rkxkuNYGwmMJ8g&s" class="card-img-top" alt="img">
+        <div class="card-body">
+          <h5 class="card-title">Salimata Ba</h5>
+          <h6 class="card-subtitle mb-2 text-muted">redactrice</h6>
+          <p class="card-text">Presse, radio, télévision, Web... 
+          ,tous les médias ont besoin d'un rédacteur en chef qui donne le ton et définit les contenus. 
+Ce professionnel de l'information anime l'équipe de journalistes de sa rédaction et développe l'image du support pour lequel il travaille.</p>
+          <p><strong>22€/h</strong></p>
+          <p class="mb-2"><span class="star">★★★☆</span> 4.1</p>
+          <a href="#" class="btn btn-primary w-100">Voir le profil</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<footer> 
+<div> 
+<p>&copy; 2025 AfriTalent. Tous droits reserves.</p> 
+</div> 
+</footer>
+ 
     
     <!-- Bootstrap 5 via CDN : script JavaScript --> 
      
