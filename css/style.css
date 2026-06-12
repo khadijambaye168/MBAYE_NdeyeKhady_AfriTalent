@@ -1,0 +1,67 @@
+
+/* ========== VARIABLES CSS - COULEURS AFRIQUE TECH ========== */
+:root {
+  --color-primary: #a4b7e0;    /* Bleu AfriTalent */
+  --color-accent: #f59e0b;     /* Orange/Ambre */
+  --color-dark: #000000;       /* Texte principal */
+  
+  --font-heading: 'Poppins', sans-serif;  /* Titres expressifs */
+  --font-body: 'Inter', sans-serif;       /* Texte lisible */
+  
+  
+  --spacing-section: 4rem;
+  
+}
+
+/* ========== RESET + BASE ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-dark);
+  background-color: var(--color-light);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 , p{
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-dark);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  width: auto;
+  height:auto;
+}
+
+/* ========== NAVBAR STYLISÉE ========== */
+.navbar {
+  background-color: rgb(0, 0, 0);
+  box-shadow: var(--shadow);
+  padding: var(--spacing-md) 0;
+  transition: all 0.3s ease; /* Pour le JS du scroll après */
+}
+
+.navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 1.5rem;
+  color: var(--color-primary) !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  color: var(--color-dark) !important;
+  margin: 0 var(--spacing-sm);
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: var(--color-primary) !important;
+}
