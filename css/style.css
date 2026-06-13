@@ -65,3 +65,258 @@ img {
 .nav-link:hover {
   color: var(--color-primary) !important;
 }
+* CSS à ajouter dans style.css */
+.hero {
+  padding: var(--spacing-section) 0;
+  background: linear-gradient(135deg, var(--color-light) 0%, #fff 100%);
+}
+
+.hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2.5rem, 5vw, 4rem); /* Typo expressive responsive */
+  font-weight: 800;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.hero-title span {
+  color: var(--color-accent); /* Le mot en orange */
+}
+
+.hero-text {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+}
+
+.hero-img {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 200px;
+  gap: 1rem;
+}
+
+.bento-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+/* La carte "big" prend 2 colonnes */
+.bento-card.big {
+  grid-column: span 2;
+  background: var(--color-primary);
+  color: white;
+}
+
+/* Effet hover demandé */
+.bento-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-card.big {
+    grid-column: span 1;
+  }
+}
+category-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease; /* Effet hover */
+}
+
+.category-card:hover {
+  transform: scale(1.05); /* Transformation */
+  box-shadow: 0 15px 30px rgba(37, 99, 235, 0.2); /* Ombre colorée */
+  border: 2px solid var(--color-primary);
+}
+.img temoignage{
+    font-weight: 100;
+    height: 100;
+  }
+
+  /* Base et Utilitaires Typographiques */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap');
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1e293b;
+}
+
+.fw-black { font-weight: 800; }
+.tracking-tight { letter-spacing: -0.025em; }
+.tracking-wider { letter-spacing: 0.05em; }
+
+/* --- 1. CONFIGURATION HERO ASYMÉTRIQUE --- */
+.text-gradient {
+    background: linear-gradient(135deg, #2563eb, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-img-wrapper {
+    position: relative;
+    padding-left: 20px;
+}
+
+.hero-img-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #2563eb;
+    z-index: 0;
+    border-radius: var(--bs-border-radius-xl)!important;
+    transform: rotate(-3deg);
+    opacity: 0.1;
+}
+
+.hero-img {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    transform: scale(1.02);
+    transition: transform 0.4s ease;
+}
+
+.hero-img:hover {
+    transform: scale(1.05) rotate(1deg);
+}
+
+/* --- 2. SECTION BENTO GRID (CSS GRID) --- */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 13fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.bento-card {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02), 0 2px 4px -1px rgba(0,0,0,0.01);
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bento-content {
+    padding: 2.5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.bento-step {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: rgba(37, 99, 235, 0.1);
+}
+
+.bento-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+/* Positionnement asymétrique Bento */
+.card-large {
+    grid-column: span 2;
+}
+.card-tall {
+    grid-row: span 2;
+}
+.card-wide {
+    grid-column: span 2;
+}
+
+/* Effet Hover sur la Bento Grid */
+.bento-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+    border-color: rgba(37, 99, 235, 0.2);
+}
+
+/* Responsive Bento Grid */
+@media (max-width: 992px) {
+    .bento-grid {
+        grid-template-columns: 1fr;
+    }
+    .card-large, .card-tall, .card-wide {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+}
+
+/* --- 3. EFFETS HOVER - CATÉGORIES --- */
+.service-card {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    background: #ffffff;
+    border: 1px solid #f1f5f9 !important;
+}
+
+.service-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 25px -5px rgba(37, 99, 235, 0.1), 0 10px 10px -5px rgba(37, 99, 235, 0.04);
+    border-color: #2563eb !important;
+}
+
+.service-active {
+    border-top: 4px solid #2563eb !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+/* --- 4. CAROUSEL TÉMOIGNAGES OPTIMISÉ --- */
+.testimonial-avatar-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.testimonial-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #2563eb;
+}
+
+#testimonialCarousel .carousel-indicators [data-bs-target] {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #2563eb;
+}
+
+#testimonialCarousel .carousel-control-prev-icon,
+#testimonialCarousel .carousel-control-next-icon {
+    filter: invert(1) grayscale(100); /* Améliore la visibilité des flèches */
+}
