@@ -596,3 +596,98 @@ body {
         padding-top: 3.5rem !important;
     }
 }
+/* --- Transitions Globales de la Navbar --- */
+.custom-navbar {
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
+
+/* --- Style appliqué lors du Scroll (Shrink, Ombre, Fond transparent flouté) --- */
+.navbar-scrolled {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Adaptation du fond de la navbar selon le thème au scroll */
+[data-bs-theme="light"] .navbar-scrolled {
+    background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
+[data-bs-theme="dark"] .navbar-scrolled {
+    background-color: rgba(26, 30, 34, 0.95) !important;
+}
+
+/* --- Bouton Retour en haut flottant --- */
+#backToTop {
+    position: fixed;
+    bottom: 25px;
+    right: -60px; /* Caché par défaut en dehors de l'écran */
+    width: 45px;
+    height: 45px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), opacity 0.3s ease;
+    opacity: 0;
+}
+
+#backToTop.visible {
+    right: 25px;
+    opacity: 1;
+}
+
+/* --- Optimisations des Contrastes des Sections pour le Dark Mode --- */
+[data-bs-theme="dark"] .bg-light,
+[data-bs-theme="dark"] .hero-section,
+[data-bs-theme="dark"] .bento-section {
+    background-color: #1e2227 !important;
+}
+
+[data-bs-theme="dark"] .style-section-white,
+[data-bs-theme="dark"] .stats-section,
+[data-bs-theme="dark"] .service-card {
+    background-color: #121417 !important;
+    color: #f8f9fa;
+}
+
+[data-bs-theme="dark"] .style-footer {
+    background-color: #0f1114 !important;
+}
+
+[data-bs-theme="dark"] .bento-card {
+    background-color: #121417;
+    border: 1px solid #2d3239;
+}
+
+[data-bs-theme="dark"] .bento-icon {
+    filter: invert(1); /* Aligne les icônes Bento noires sur le mode sombre */
+}
+
+[data-bs-theme="dark"] .btn-hero-outline {
+    color: #fff;
+    border-color: #fff;
+}
+
+[data-bs-theme="dark"] .btn-hero-outline:hover {
+    background-color: #fff;
+    color: #121417;
+}
+
+/* --- Media Queries de Sécurisation Mobile (375px) --- */
+@media (max-width: 575.98px) {
+    #backToTop.visible {
+        bottom: 15px;
+        right: 15px;
+    }
+    .custom-navbar .navbar-collapse {
+        background-color: rgba(26, 30, 34, 0.98);
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 10px;
+    }
+}
