@@ -320,3 +320,279 @@ body {
 #testimonialCarousel .carousel-control-next-icon {
     filter: invert(1) grayscale(100); /* Améliore la visibilité des flèches */
 }
+/* --- Base Style --- */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1a2530;
+}
+
+/* Forcer les photos de l'équipe à être parfaitement rondes et égales */
+.team-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* --- Media Queries Personnalisées (Exigées) --- */
+
+/* Mobile (375px et moins / ajustements fins) */
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .carte {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Tablette (768px à 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .team-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px; /* Aligné sur les standards desktop Bootstrap */
+    }
+    .py-5 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+}
+/* --- Base Style --- */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #1a2530;
+}
+
+/* Forcer les photos de l'équipe à être parfaitement rondes et égales */
+.team-img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+}
+
+/* --- Media Queries Personnalisées (Exigées) --- */
+
+/* Mobile (375px et moins / ajustements fins) */
+@media (max-width: 575.98px) {
+    h1 {
+        font-size: 1.8rem !important;
+    }
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    .carte {
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* Tablette (768px à 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .py-5 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+    .team-img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* Large Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px; /* Aligné sur les standards desktop Bootstrap */
+    }
+    .py-5 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+}
+/* --- Styles de Base & Formulaires --- */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.error-message {
+    display: none; /* Masqué par défaut, géré par votre script js/main.js */
+    color: #dc3545;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+}
+
+/* --- Media Queries --- */
+
+/* Mobile (Ajustements pour les écrans étroits à 375px) */
+@media (max-width: 575.98px) {
+    .container-main {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    /* Change le ratio de la carte pour éviter qu'elle soit écrasée en hauteur sur mobile */
+    .ratio-mobile {
+        --bs-aspect-ratio: 75% !important; /* Devient un format 4:3 plus lisible */
+    }
+    
+    #contactForm {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Tablette (Ajustements à 768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card-body {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Grand Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    .container-main {
+        margin-top: 4rem !important;
+        margin-bottom: 4rem !important;
+    }
+}
+/* --- Base Styles --- */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f4f6f9;
+}
+
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-features li {
+    font-size: 0.95rem;
+}
+
+/* --- Media Queries --- */
+
+/* Mobile (Ajustements fins à 375px) */
+@media (max-width: 575.98px) {
+    .section-tarifs {
+        margin-top: 1.5rem !important;
+        margin-bottom: 1.5rem !important;
+    }
+    h2 {
+        font-size: 1.75rem;
+    }
+    /* Annulation du scale sur mobile pour éviter que la carte ne bave sur les côtés à 375px */
+    .card-premium {
+        transform: scale(1) !important;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+/* Tablette (Ajustements à 768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Sur tablette à 2 colonnes, force la carte Pro à s'aligner proprement */
+    .card-premium {
+        transform: scale(1.02) !important;
+    }
+}
+
+/* Grand Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    /* Effet de zoom élégant activé uniquement sur grand écran */
+    .card-premium {
+        transform: scale(1.06);
+        z-index: 2;
+    }
+    .plan-card:hover {
+        transform: translateY(-5px);
+    }
+}
+/* --- Base Styles Appliqués au Catalogue --- */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Forcer l'affichage de toutes les cartes à l'identique avec structure flexible */
+.profile-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.profile-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+}
+
+/* Uniformisation des proportions des images */
+.card-img-wrapper {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.card-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Sécurisation de l'affichage par défaut du sélecteur de filtre */
+.filter-select {
+    width: 250px;
+}
+
+/* --- Media Queries Personnalisées --- */
+
+/* Mobile (Ajustements à 375px et moins) */
+@media (max-width: 575.98px) {
+    .main-content {
+        padding-top: 1.5rem !important;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    /* Filtre prend toute la largeur sur petit écran pour une meilleure ergonomie */
+    .filter-select {
+        width: 100% !important;
+    }
+    .card-img-wrapper {
+        height: 180px; /* Légèrement plus compact sur mobile */
+    }
+}
+
+/* Tablette (Ajustements à 768px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .card-img-wrapper {
+        height: 170px; /* Ratio optimal pour les affichages en double colonne */
+    }
+}
+
+/* Grand Desktop (1200px+) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    .main-content {
+        padding-top: 3.5rem !important;
+    }
+}
