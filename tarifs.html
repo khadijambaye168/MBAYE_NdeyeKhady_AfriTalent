@@ -1,145 +1,207 @@
-<!DOCTYPE html> 
-<html lang="fr" data-bs-theme="light"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>AfriTalent — Tarifs</title> 
-    
-    <!-- Bootstrap 5 & Icons via CDN --> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light">
+
+<head>
+    <!-- Configuration de base : Encodage et gestion du Responsive Design -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent — Tarifs</title>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- IMPORTS DES ARCHITECTURES ET LOGOS (CSS)             -->
+    <!-- ---------------------------------------------------- -->
+    <!-- Bootstrap 5 : Framework principal pour la mise en page et les composants graphiques -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons : Utilisé ici pour les coches vertes et croix des fonctionnalités -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <!-- Google Fonts -->
+
+    <!-- Google Fonts & Style Local -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
 
-    <!-- Navigation Bootstrap commune synchro (Classes de scroll et bouton Thème inclus) --> 
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-dark bg-dark"> 
-        <div class="container"> 
-            <a class="navbar-brand fw-bold text-uppercase tracking-wider" href="index.html">AfriTalent</a> 
-            
-            <button class="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navMenu" 
-                aria-controls="navMenu" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation"> 
+<body>
+    <!-- ==================================================== -->
+    <!-- BARRE DE NAVIGATION (NAVBAR)                         -->
+    <!-- ==================================================== -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-dark bg-dark">
+        <div class="container">
+            <!-- Identité visuelle AfriTalent -->
+            <a class="navbar-brand fw-bold text-uppercase tracking-wider neon-brand" href="index.html">
+                <span class="text-neon-blue">💙Afri</span><span class="text-neon-pink">Talent🧡</span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button> 
+            </button>
 
-            <div class="collapse navbar-collapse" id="navMenu"> 
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-2"> 
-                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li> 
-                    <li class="nav-item"><a class="nav-link active" href="tarifs.html">Tarifs</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>  
-                    <li class="nav-item"><a class="nav-link me-lg-2" href="contact.html">Contact</a></li> 
-                    
-                    <!-- Bouton de basculement Dark/Light Mode -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link me-2" href="contact.html">Contact</a></li>
+
+                    <!-- Bouton de basculement Dark/Light Mode (Géré par js/main.js) -->
                     <li class="nav-item me-2">
-                        <button id="themeToggle" class="btn btn-link nav-link text-white border-0 p-2" aria-label="Changer de thème">
+                        <button id="themeToggle" class="btn btn-link nav-link text-white border-0 p-2"
+                            aria-label="Changer de thème">
                             <i id="themeIcon" class="bi bi-sun-fill"></i>
                         </button>
                     </li>
 
                     <li class="nav-item mt-2 mt-lg-0">
-                        <a href="freelances.html" class="btn btn-primary btn-sm px-3 rounded-pill">Rejoindre AfriTalent</a>
+                        <a href="freelances.html" class="btn btn-primary btn-sm px-3 rounded-pill">Rejoindre
+                            AfriTalent</a>
                     </li>
-                </ul> 
+                </ul>
             </div>
-        </div> 
-    </nav> 
+        </div>
+    </nav>
 
-    <!-- Conteneur principal avec marge supérieure pour compenser la navbar fixe -->
+    <!-- ==================================================== -->
+    <!-- CONTENU PRINCIPAL DE LA PAGE                         -->
+    <!-- ==================================================== -->
+    <!-- padding-top: 90px évite que l'en-tête soit masqué sous la barre de navigation fixe -->
     <main style="padding-top: 90px;">
 
-        <!-- Section : Grille des Tarifs --> 
+        <!-- SECTION CONTENEUR DES GRILLES DE PRIX -->
         <section class="container my-5 section-tarifs">
             <h1 class="text-center fw-bold mb-2 h2">Nos Plans et Tarifs</h1>
             <p class="text-center text-muted mb-5">Des solutions adaptées pour booster vos projets, sans engagement.</p>
-            
-            <!-- Grille Bootstrap configurée -->
+
+            <!-- GRILLE DE TROIS COLONNES -->
+            <!-- .align-items-stretch : Force toutes les cartes à s'aligner sur la même hauteur maximale de la ligne -->
             <div class="row text-center g-4 align-items-stretch">
-                
-                <!-- Plan Gratuit -->
+
+                <!-- ---------------------------------------------------- -->
+                <!-- CARTE 1 : PLAN GRATUIT                               -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4">
+                    <!-- .h-100 : s'étire verticalement | .border-0 : supprime les bordures grises par défaut -->
                     <div class="card h-100 border-0 shadow-sm plan-card service-card">
                         <div class="card-header bg-transparent py-3 border-0">
-                            <h4 class="fw-bold mb-0 text-body">Gratuit</h4>
+                            <h2 class="h4 fw-bold mb-0 text-body">Gratuit</h2>
                         </div>
+
+                        <!-- .d-flex .flex-column : Permet d'organiser les éléments du corps verticalement -->
                         <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="display-6 fw-bold mb-4">0€<small class="text-muted fs-6 fw-normal">/mois</small></h3>
+                            <h3 class="display-6 fw-bold mb-4">0€<small class="text-muted fs-6 fw-normal">/mois</small>
+                            </h3>
+
+                            <!-- .flex-grow-1 : Cette liste va occuper tout l'espace libre restant, repoussant le bouton en bas -->
                             <ul class="list-unstyled text-start mb-4 card-features flex-grow-1">
                                 <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>5 projets</li>
-                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Support email</li>
-                                <li class="mb-2 text-muted text-decoration-line-through"><i class="bi bi-x-circle me-2"></i>Support prioritaire</li>
-                                <li class="mb-2 text-muted text-decoration-line-through"><i class="bi bi-x-circle me-2"></i>Accès API</li>
+                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Support email
+                                </li>
+                                <!-- Option non incluse : style barré (.text-decoration-line-through) et couleur atténuée -->
+                                <li class="mb-2 text-muted text-decoration-line-through"><i
+                                        class="bi bi-x-circle me-2"></i>Support prioritaire</li>
+                                <li class="mb-2 text-muted text-decoration-line-through"><i
+                                        class="bi bi-x-circle me-2"></i>Accès API</li>
                             </ul>
+
+                            <!-- .mt-auto : S'accroche automatiquement tout au bas du composant grâce à Flexbox -->
                             <button class="btn btn-outline-primary w-100 py-2 rounded-pill mt-auto">Commencer</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plan Pro - RECOMMANDÉ -->
+                <!-- ---------------------------------------------------- -->
+                <!-- CARTE 2 : PLAN PRO (MISE EN AVANT)                   -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4">
+                    <!-- .border-primary & .shadow : Accentue visuellement cette offre par rapport aux autres -->
+                    <!-- .position-relative : Nécessaire pour pouvoir ancrer le badge "Populaire" de façon absolue -->
                     <div class="card h-100 border-primary shadow card-premium position-relative">
-                        <span class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle rounded-pill px-3 py-2 text-uppercase fw-bold">Populaire</span>
+
+                        <!-- BADGE POPULAIRE -->
+                        <!-- .top-0 .start-50 .translate-middle : Aligne le badge exactement au centre de la bordure supérieure -->
+                        <span
+                            class="badge bg-warning text-dark position-absolute top-0 start-50 translate-middle rounded-pill px-3 py-2 text-uppercase fw-bold">Populaire</span>
+
+                        <!-- En-tête coloré en bleu pour marquer la distinction Premium -->
                         <div class="card-header bg-primary text-white py-3 border-0">
-                            <h4 class="fw-bold mb-0">Pro</h4>
+                            <h2 class="h4 fw-bold mb-0 text-white">Pro</h2>
                         </div>
+
                         <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="display-6 fw-bold mb-4 text-body">29€<small class="text-muted fs-6 fw-normal">/mois</small></h3>
+                            <h3 class="display-6 fw-bold mb-4 text-body">29€<small
+                                    class="text-muted fs-6 fw-normal">/mois</small></h3>
                             <ul class="list-unstyled text-start mb-4 card-features flex-grow-1">
-                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Projets illimités</li>
-                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Support prioritaire</li>
+                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Projets
+                                    illimités</li>
+                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Support
+                                    prioritaire</li>
                                 <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Accès API</li>
-                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Statistiques avancées</li>
+                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Statistiques
+                                    avancées</li>
                             </ul>
-                            <button class="btn btn-primary w-100 py-2 rounded-pill shadow-sm mt-auto">Choisir Pro</button>
+                            <button class="btn btn-primary w-100 py-2 rounded-pill shadow-sm mt-auto">Choisir
+                                Pro</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Plan Entreprise -->
+                <!-- ---------------------------------------------------- -->
+                <!-- CARTE 3 : PLAN ENTREPRISE                            -->
+                <!-- ---------------------------------------------------- -->
+                <!-- .offset-md-3 .offset-lg-0 : Centre cette carte sur tablette (quand il n'y a que 2 colonnes par ligne) -->
                 <div class="col-12 col-md-6 col-lg-4 offset-md-3 offset-lg-0">
-                    <div class="card h-100 border-0 shadow-sm plan-card service-card">
+                    <div class="card h-100 shadow-sm border-0 plan-card service-card">
                         <div class="card-header bg-transparent py-3 border-0">
-                            <h4 class="fw-bold mb-0 text-body">Entreprise</h4>
+                            <h2 class="h4 fw-bold mb-0 text-body">Entreprise</h2>
                         </div>
                         <div class="card-body p-4 d-flex flex-column">
-                            <h3 class="display-6 fw-bold mb-4">99€<small class="text-muted fs-6 fw-normal">/mois</small></h3>
+                            <h3 class="display-6 fw-bold mb-4">99€<small class="text-muted fs-6 fw-normal">/mois</small>
+                            </h3>
                             <ul class="list-unstyled text-start mb-4 card-features flex-grow-1">
-                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Tout du plan Pro</li>
-                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Compte dédié</li>
+                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Tout du plan
+                                    Pro</li>
+                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Compte dédié
+                                </li>
                                 <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>SLA 99.9%</li>
-                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Intégration sur-mesure</li>
+                                <li class="mb-2 text-success"><i class="bi bi-check-circle-fill me-2"></i>Intégration
+                                    sur-mesure</li>
                             </ul>
                             <button class="btn btn-outline-primary w-100 py-2 rounded-pill mt-auto">Contacter</button>
                         </div>
                     </div>
                 </div>
 
-            </div>
+            </div> <!-- Fin de la rangée des tarifs -->
         </section>
 
-        <!-- Section : FAQ -->
+        <!-- ==================================================== -->
+        <!-- SECTION COMPOSANT INTERACTIF : FOIRE AUX QUESTIONS   -->
+        <!-- ==================================================== -->
         <section class="container my-5 pt-4">
             <h2 class="text-center fw-bold mb-4">FAQ</h2>
             <div class="row justify-content-center">
+                <!-- Limite la largeur de la FAQ à 8 colonnes sur les écrans d'ordinateur pour une meilleure lisibilité -->
                 <div class="col-12 col-lg-8">
+
+                    <!-- L'ID général #faqAccordion sert à relier et fermer automatiquement un volet lorsqu'un autre s'ouvre -->
                     <div class="accordion" id="faqAccordion">
-                        
+
+                        <!-- BLOC QUESTION 1 (Ouvert par défaut) -->
                         <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
+                            <h3 class="accordion-header">
+                                <!-- data-bs-target="#q1" : Indique quel bloc de texte doit s'ouvrir au clic -->
+                                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#q1" aria-expanded="true" aria-controls="q1">
                                     Puis-je changer de plan à tout moment ?
                                 </button>
-                            </h2>
+                            </h3>
+                            <!-- .show : Indique que ce panneau est visible dès le chargement initial de la page -->
+                            <!-- data-bs-parent="#faqAccordion" : Active la fermeture automatique des autres éléments ouverts -->
                             <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-secondary">
                                     Oui, tu peux upgrader ou downgrader ton plan à tout moment depuis ton dashboard.
@@ -147,12 +209,17 @@
                             </div>
                         </div>
 
+                        <!-- BLOC QUESTION 2 (Fermé par défaut) -->
                         <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false" aria-controls="q2">
+                            <h3 class="accordion-header">
+                                <!-- .collapsed : Classe Bootstrap requise pour styliser la flèche pivotante vers le bas -->
+                                <button class="accordion-button collapsed fw-semibold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q2" aria-expanded="false"
+                                    aria-controls="q2">
                                     Y a-t-il un engagement minimum ?
                                 </button>
-                            </h2>
+                            </h3>
+                            <!-- Sans la classe .show, le contenu est masqué à l'état initial -->
                             <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-secondary">
                                     Non, tous nos plans sont sans engagement. Tu peux annuler quand tu veux.
@@ -160,12 +227,15 @@
                             </div>
                         </div>
 
+                        <!-- BLOC QUESTION 3 -->
                         <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false" aria-controls="q3">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q3" aria-expanded="false"
+                                    aria-controls="q3">
                                     Proposez-vous une période d'essai ?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-secondary">
                                     Oui, le plan Pro a 14 jours d'essai gratuit, sans carte bancaire.
@@ -173,25 +243,32 @@
                             </div>
                         </div>
 
+                        <!-- BLOC QUESTION 4 -->
                         <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false" aria-controls="q4">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q4" aria-expanded="false"
+                                    aria-controls="q4">
                                     Comment fonctionne le support ?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-secondary">
-                                    Le plan Gratuit a un support email. Le plan Pro et Entreprise ont un support prioritaire 24/7.
+                                    Le plan Gratuit a un support email. Le plan Pro et Entreprise ont un support
+                                    prioritaire 24/7.
                                 </div>
                             </div>
                         </div>
 
+                        <!-- BLOC QUESTION 5 -->
                         <div class="accordion-item border-0 shadow-sm mb-3 rounded-3 overflow-hidden">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false" aria-controls="q5">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button"
+                                    data-bs-toggle="collapse" data-bs-target="#q5" aria-expanded="false"
+                                    aria-controls="q5">
                                     Puis-je être facturé annuellement ?
                                 </button>
-                            </h2>
+                            </h3>
                             <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                                 <div class="accordion-body text-secondary">
                                     Oui, la facturation annuelle te donne 2 mois offerts sur tous les plans payants.
@@ -199,25 +276,29 @@
                             </div>
                         </div>
 
-                    </div>
+                    </div> <!-- Fin de l'accordéon -->
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer aligné et stylisé -->
-    <footer class="text-center py-4 border-top style-footer"> 
-        <div class="container"> 
-            <p class="text-muted mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p> 
-        </div> 
+    <!-- ==================================================== -->
+    <!-- PIED DE PAGE & SCRIPT D'ANIMATIONS                   -->
+    <!-- ==================================================== -->
+    <footer class="text-center py-4 border-top style-footer">
+        <div class="container">
+            <p class="text-muted mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p>
+        </div>
     </footer>
-     
-    <!-- Élément d'ancrage pour le bouton Retour en haut -->
+
+    <!-- Bouton flottant de retour en haut de la page -->
     <button id="backToTop" class="btn btn-primary rounded-circle shadow" aria-label="Retour en haut">
         <i class="bi bi-arrow-up"></i>
     </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
-    <script src="js/main.js"></script> 
-</body> 
+    <!-- JS de Bootstrap (gère l'ouverture/fermeture automatique des éléments de la FAQ) et votre logique main.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
 </html>

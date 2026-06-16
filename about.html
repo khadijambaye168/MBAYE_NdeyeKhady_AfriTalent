@@ -1,199 +1,304 @@
-<!DOCTYPE html> 
-<html lang="fr" data-bs-theme="light"> 
-<head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>AfriTalent — À propos</title> 
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<!-- data-bs-theme="light" : Active le thème clair natif de Bootstrap 5.3 à la racine du document -->
+<html lang="fr" data-bs-theme="light">
 
-  <link rel="stylesheet" href="css/style.css"> 
+<head>
+    <meta charset="UTF-8">
+    <!-- viewport : Assure le responsive design en adaptant la largeur de la page à celle de l'écran (mobile, tablette, PC) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent — À propos</title>
+
+    <!-- ========================================== -->
+    <!-- LIENS CDN (BOOTSTRAP, ICONS & FONTS)       -->
+    <!-- ========================================== -->
+    <!-- Feuille de style principale de Bootstrap 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bibliothèque d'icônes officielles de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- preconnect : Optimise les performances de chargement en anticipant la connexion DNS aux serveurs Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Police 'Plus Jakarta Sans' : Chargement des graisses 400 (normal), 500 (moyen) et 700 (gras). 
+         Le signe '&' est remplacé par '&amp;' pour garantir la stricte conformité et validation W3C -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap"
+        rel="stylesheet">
+
+    <!-- Votre feuille de style personnalisée (doit être placée après Bootstrap pour pouvoir surcharger ses classes) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
 
-  <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-dark bg-dark"> 
-    <div class="container"> 
-      <a class="navbar-brand fw-bold text-uppercase tracking-wider" href="index.html">AfriTalent</a> 
-      
-      <button class="navbar-toggler" type="button" 
-        data-bs-toggle="collapse" 
-        data-bs-target="#navMenu" 
-        aria-controls="navMenu" 
-        aria-expanded="false" 
-        aria-label="Toggle navigation"> 
-        <span class="navbar-toggler-icon"></span>
-      </button> 
+<body>
 
-      <div class="collapse navbar-collapse" id="navMenu"> 
-        <ul class="navbar-nav ms-auto align-items-center gap-2"> 
-          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li> 
-          <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li> 
-          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li> 
-          <li class="nav-item"><a class="nav-link active" href="about.html">A propos</a></li>
-          <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>  
-          <li class="nav-item"><a class="nav-link me-2" href="contact.html">Contact</a></li> 
-          
-          <li class="nav-item me-2">
-            <button id="themeToggle" class="btn btn-link nav-link text-white border-0 p-2" aria-label="Changer de thème">
-              <i id="themeIcon" class="bi bi-sun-fill"></i>
+    <!-- ========================================== -->
+    <!-- BARRE DE NAVIGATION (NAVBAR)               -->
+    <!-- ========================================== -->
+    <!-- fixed-top : Fixe la barre en haut de l'écran lors du défilement
+         navbar-expand-lg : Le menu reste horizontal sur PC/Tablette et se transforme en hamburger sur Mobile -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-dark bg-dark">
+        <div class="container">
+            <!-- Logo de la marque avec styles typographiques et classes personnalisées pour l'effet Néon -->
+            <a class="navbar-brand fw-bold text-uppercase tracking-wider neon-brand" href="index.html">
+                <span class="text-neon-blue">💙Afri</span><span class="text-neon-pink">Talent🧡</span>
+            </a>
+
+            <!-- Bouton Hamburger visible uniquement sur écrans mobiles (géré par les attributs data-bs-toggle/target) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          </li>
 
-          <li class="nav-item mt-2 mt-lg-0">
-            <a href="freelances.html" class="btn btn-primary btn-sm px-3 rounded-pill">Rejoindre AfriTalent</a>
-          </li>
-        </ul> 
-      </div>
-    </div> 
-  </nav> 
+            <!-- Conteneur des liens de navigation, se replie (collapse) sur mobile -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <!-- ms-auto : Aligne le menu à droite. gap-2 : Crée un espacement constant entre les éléments -->
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link me-2" href="contact.html">Contact</a></li>
 
-  <main style="padding-top: 76px;"> 
-    
-    <section class="py-5 bg-light bento-section">
-      <div class="container">
-        <div class="row align-items-center g-4">
-          <div class="col-12 col-md-6">
-            <h1 class="display-5 fw-bold mb-3">Notre Histoire</h1>
-            <h5 class="text-muted mb-3 fw-normal">AfriTalent est né en 2022 pour connecter les talents africains aux entreprises du monde entier.</h5>
-            <p class="lead text-secondary fs-5">Notre mission : rendre le travail remote accessible et fiable.</p>
-          </div>
-          <div class="col-12 col-md-6">
-            <img src="https://www.kara.fr/wp-content/uploads/2019/02/dev-962x433.jpg" class="img-fluid rounded shadow-sm" alt="Notre équipe">
-          </div>
-        </div>
-      </div>
-    </section>
+                    <!-- Bouton de basculement Dark/Light Mode : Prêt à être ciblé en JS grâce à l'ID 'themeToggle' -->
+                    <li class="nav-item me-2">
+                        <button id="themeToggle" class="btn btn-link nav-link text-white border-0 p-2"
+                            aria-label="Changer de thème">
+                            <i id="themeIcon" class="bi bi-sun-fill"></i>
+                        </button>
+                    </li>
 
-    <section class="py-5 style-section-white">
-      <div class="container">
-        <h2 class="text-center fw-bold mb-5">L'équipe</h2>
-        <div class="row g-4">
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card text-center p-4 border rounded shadow-sm bg-body-tertiary h-100">
-              <img src="https://images.teamtailor-cdn.com/images/s3/teamtailor-production/square_226-v4/image_uploads/9f610715-c89b-4f92-b096-c0cad1f91d69/original.jpeg?outputFormat=webp" class="img-fluid rounded-circle mb-3 team-img mx-auto" alt="Photo Sarah Dupont" style="width: 120px; height: 120px; object-fit: cover;">
-              <h3 class="h5 fw-bold">Sarah Dupont</h3>
-              <p class="poste text-primary fw-semibold">CEO & Fondatrice</p>
-              <div class="reseaux mt-auto">
-                <a href="https://linkedin.com" target="_blank" class="me-2 btn btn-outline-primary btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
-                <a href="https://twitter.com" target="_blank" class="btn btn-outline-secondary btn-sm rounded-circle"><i class="bi bi-twitter-x"></i></a>
-              </div>
+                    <!-- Bouton d'appel à l'action (CTA) principal de la Navbar -->
+                    <li class="nav-item mt-2 mt-lg-0">
+                        <a href="freelances.html" class="btn btn-primary btn-sm px-3 rounded-pill">Rejoindre
+                            AfriTalent</a>
+                    </li>
+                </ul>
             </div>
-          </div>
-          
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card text-center p-4 border rounded shadow-sm bg-body-tertiary h-100">
-              <img src="https://media.licdn.com/dms/image/v2/D5603AQFdILrCJwK8OA/profile-displayphoto-shrink_200_200/B56ZWY1BWJHQAY-/0/1742025791802?e=2147483647&v=beta&t=9qIAlt97EaCEr9BBllMHaE6ifqAmNKJ-BjHs9z70KHM" class="img-fluid rounded-circle mb-3 team-img mx-auto" alt="Photo Malik Diallo" style="width: 120px; height: 120px; object-fit: cover;">
-              <h3 class="h5 fw-bold">Malik Diallo</h3>
-              <p class="poste text-primary fw-semibold">Lead Développeur</p>
-              <div class="reseaux mt-auto">
-                <a href="https://github.com" target="_blank" class="me-2 btn btn-outline-primary btn-sm rounded-circle"><i class="bi bi-github"></i></a>
-                <a href="https://linkedin.com" target="_blank" class="btn btn-outline-secondary btn-sm rounded-circle"><i class="bi bi-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-          
-          <div class="col-12 col-md-6 col-lg-4">
-            <div class="card text-center p-4 border rounded shadow-sm bg-body-tertiary h-100">
-              <img src="https://i.pravatar.cc/200?img=5" class="img-fluid rounded-circle mb-3 team-img mx-auto" alt="Photo Aïcha Koné" style="width: 120px; height: 120px; object-fit: cover;">
-              <h3 class="h5 fw-bold">Aïcha Koné</h3>
-              <p class="poste text-primary fw-semibold">UX/UI Designer</p>
-              <div class="reseaux mt-auto">
-                <a href="https://dribbble.com" target="_blank" class="me-2 btn btn-outline-primary btn-sm rounded-circle"><i class="bi bi-dribbble"></i></a>
-                <a href="https://instagram.com" target="_blank" class="btn btn-outline-secondary btn-sm rounded-circle"><i class="bi bi-instagram"></i></a>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-<section class="py-5git status bg-light bento-section">
-  <div class="container">
-    <h2 class="text-center fw-bold mb-5">Nos Valeurs</h2>
-    <div class="row g-4">
-      
-      <!-- Valeur 1 : Innovation -->
-      <div class="col-12 col-md-6 col-lg-3">
-        <!-- Ajout de d-flex flex-column align-items-center pour forcer l'empilement vertical parfait -->
-        <div class="p-4 bg-body-tertiary rounded shadow-sm h-100 text-center bento-card d-flex flex-column align-items-center">
-          <img src="https://img.icons8.com/?size=100&id=46620&format=png&color=000000" class="mb-3 bento-icon" width="60" alt="icon innovation">
-          <h3 class="h5 fw-bold text-capitalize">Innovation</h3>
-          <p class="small text-muted mb-0">L'innovation pour nous c'est transformer le potentiel africain en opportunité concrète. On ne suit pas le changement, on le crée.</p>
-        </div>
-      </div>
+    </nav>
 
-      <!-- Valeur 2 : Accessibilité -->
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="p-4 bg-body-tertiary rounded shadow-sm h-100 text-center bento-card d-flex flex-column align-items-center">
-          <img src="https://img.icons8.com/?size=100&id=3B5MFjiD3reA&format=png&color=000000" class="mb-3 bento-icon" width="60" alt="icon accessibilité">
-          <h3 class="h5 fw-bold text-capitalize">Accessibilité</h3>
-          <p class="small text-muted mb-0">Chez AfriTalent, l'accessibilité c'est notre promesse : donner à chaque talent Africain, peu importe d'où il vient, les mêmes chances.</p>
-        </div>
-      </div>
+    <!-- ========================================== -->
+    <!-- CONTENU PRINCIPAL (MAIN)                   -->
+    <!-- ========================================== -->
+    <!-- padding-top: 76px : Indispensable pour compenser la hauteur de la navbar fixe, évitant ainsi que le contenu soit masqué -->
+    <main style="padding-top: 76px;">
 
-      <!-- Valeur 3 : Communauté -->
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="p-4 bg-body-tertiary rounded shadow-sm h-100 text-center bento-card d-flex flex-column align-items-center">
-          <img src="https://img.icons8.com/?size=100&id=aUiThmwNs5sO&format=png&color=000000" class="mb-3 bento-icon" width="60" alt="icon communauté">
-          <h3 class="h5 fw-bold text-capitalize">Communauté</h3>
-          <p class="small text-muted mb-0">Le cœur de tout. On ne met pas juste des CV en ligne, on connecte des humains, des parcours, des ambitions.</p>
-        </div>
-      </div>
-
-      <!-- Valeur 4 : Excellence -->
-      <div class="col-12 col-md-6 col-lg-3">
-        <div class="p-4 bg-body-tertiary rounded shadow-sm h-100 text-center bento-card d-flex flex-column align-items-center">
-          <img src="https://img.icons8.com/?size=100&id=112791&format=png&color=000000" class="mb-3 bento-icon" width="60" alt="icon excellence">
-          <h3 class="h5 fw-bold text-capitalize">Excellence</h3>
-          <p class="small text-muted mb-0">Nous visons les standards internationaux les plus élevés pour valoriser l'ingéniosité et la rigueur des experts du continent.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-    <section id="statistiques" class="py-5 bg-dark text-white stats-section"> 
-      <div class="container text-center"> 
-        <h2 class="fw-bold mb-5 text-primary">AfriTalent en chiffres</h2> 
-        <div class="row g-4"> 
-          <div class="col-12 col-md-4">
-            <div class="p-3">
-              <h3 class="counter display-6 fw-bold text-primary" data-target="1200">+1200</h3>
-              <p class="mb-0 text-white-50">Freelances</p>
+        <!-- ------------------------------------------ -->
+        <!-- Section Histoire                           -->
+        <!-- ------------------------------------------ -->
+        <!-- py-5 : Ajoute du padding vertical (top et bottom) pour aérer le design -->
+        <section class="py-5 bg-light bento-section">
+            <div class="container">
+                <!-- align-items-center : Aligne verticalement le texte et l'image. g-4 : Définit l'espace (gutter) entre les colonnes -->
+                <div class="row align-items-center g-4">
+                    <!--col-12 col-md-6 : Occupe 100% de la largeur sur mobile et 50% à partir des tablettes/PC -->
+                    <div class="col-12 col-md-6">
+                        <h1 class="display-5 fw-bold mb-3">Notre Histoire</h1>
+                        <h5 class="text-muted mb-3 fw-normal">AfriTalent est né en 2022 pour connecter les talents
+                            africains aux entreprises du monde entier.</h5>
+                        <p class="lead text-secondary fs-5">Notre mission : rendre le travail remote accessible et
+                            fiable.</p>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <!-- img-fluid : Rend l'image responsive (s'adapte à sa colonne). shadow-sm : Ajoute une ombre légère discrète -->
+                        <img src="https://www.kara.fr/wp-content/uploads/2019/02/dev-962x433.jpg"
+                            class="img-fluid rounded shadow-sm" alt="Membres de l'équipe AfriTalent au travail">
+                    </div>
+                </div>
             </div>
-          </div> 
-          <div class="col-12 col-md-4">
-            <div class="p-3">
-              <h3 class="counter display-6 fw-bold text-primary" data-target="45">+45</h3>
-              <p class="mb-0 text-white-50">Pays représentés</p>
+        </section>
+
+        <!-- ------------------------------------------ -->
+        <!-- Section Équipe                             -->
+        <!-- ------------------------------------------ -->
+        <section class="py-5 style-section-white">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">L'équipe</h2>
+                <div class="row g-4">
+
+                    <!-- Membre 1 (Sarah) -->
+                    <!-- col-lg-4 : Permet d'afficher 3 cartes par ligne sur les grands écrans (12 colonnes / 4 = 3) -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <!-- h-100 : Force toutes les cartes de la ligne à adopter exactement la même hauteur (très important pour l'alignement visuel) -->
+                        <div class="card text-center p-4 border rounded shadow-sm bg-body-tertiary h-100">
+                            <!-- object-fit: cover : Évite de déformer l'image si ses proportions d'origine ne sont pas carrées -->
+                            <img src="https://images.teamtailor-cdn.com/images/s3/teamtailor-production/square_226-v4/image_uploads/9f610715-c89b-4f92-b096-c0cad1f91d69/original.jpeg?outputFormat=webp"
+                                class="img-fluid rounded-circle mb-3 team-img mx-auto" alt="Photo de Sarah Dupont"
+                                style="width: 120px; height: 120px; object-fit: cover;">
+                            <h3 class="h5 fw-bold">Sarah Dupont</h3>
+                            <p class="poste text-primary fw-semibold">CEO & Fondatrice</p>
+                            <!-- mt-auto : Pousse les icônes de réseaux sociaux tout en bas de la carte si les blocs de texte ont des tailles différentes -->
+                            <div class="reseaux mt-auto">
+                                <!-- rel="noopener" : Mesure de sécurité obligatoire lors de l'utilisation de target="_blank" -->
+                                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                                    class="me-2 btn btn-outline-primary btn-sm rounded-circle"
+                                    aria-label="Profil LinkedIn de Sarah Dupont"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://twitter.com" target="_blank" rel="noopener"
+                                    class="btn btn-outline-secondary btn-sm rounded-circle"
+                                    aria-label="Profil X de Sarah Dupont"><i class="bi bi-twitter-x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Membre 2 (Malik) -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-center p-4 border rounded shadow-sm bg-body-tertiary h-100">
+                            <img src="https://media.licdn.com/dms/image/v2/D5603AQFdILrCJwK8OA/profile-displayphoto-shrink_200_200/B56ZWY1BWJHQAY-/0/1742025791802?e=2147483647&amp;v=beta&amp;t=9qIAlt97EaCEr9BBllMHaE6ifqAmNKJ-BjHs9z70KHM"
+                                class="img-fluid rounded-circle mb-3 team-img mx-auto" alt="Photo de Malik Diallo"
+                                style="width: 120px; height: 120px; object-fit: cover;">
+                            <h3 class="h5 fw-bold">Malik Diallo</h3>
+                            <p class="poste text-primary fw-semibold">Lead Développeur</p>
+                            <div class="reseaux mt-auto">
+                                <a href="https://github.com" target="_blank" rel="noopener"
+                                    class="me-2 btn btn-outline-primary btn-sm rounded-circle"
+                                    aria-label="Profil GitHub de Malik Diallo"><i class="bi bi-github"></i></a>
+                                <a href="https://linkedin.com" target="_blank" rel="noopener"
+                                    class="btn btn-outline-secondary btn-sm rounded-circle"
+                                    aria-label="Profil LinkedIn de Malik Diallo"><i class="bi bi-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Membre 3 (Aïcha) -->
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card text-center p-4 border rounded shadow-sm bg-body-tertiary h-100">
+                            <img src="https://i.pravatar.cc/200?img=5"
+                                class="img-fluid rounded-circle mb-3 team-img mx-auto" alt="Photo de Aïcha Koné"
+                                style="width: 120px; height: 120px; object-fit: cover;">
+                            <h3 class="h5 fw-bold">Aïcha Koné</h3>
+                            <p class="poste text-primary fw-semibold">UX/UI Designer</p>
+                            <div class="reseaux mt-auto">
+                                <a href="https://dribbble.com" target="_blank" rel="noopener"
+                                    class="me-2 btn btn-outline-primary btn-sm rounded-circle"
+                                    aria-label="Profil Dribbble de Aïcha Koné"><i class="bi bi-dribbble"></i></a>
+                                <a href="https://instagram.com" target="_blank" rel="noopener"
+                                    class="btn btn-outline-secondary btn-sm rounded-circle"
+                                    aria-label="Profil Instagram de Aïcha Koné"><i class="bi bi-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div> 
-          <div class="col-12 col-md-4">
-            <div class="p-3">
-              <h3 class="counter display-6 fw-bold text-primary" data-target="3800">+3800</h3>
-              <p class="mb-0 text-white-50">Projets réalisés</p>
+        </section>
+
+        <!-- ------------------------------------------ -->
+        <!-- Section Valeurs (Structure Bento Box)      -->
+        <!-- ------------------------------------------ -->
+        <section class="py-5 bg-light bento-section">
+            <div class="container">
+                <h2 class="text-center fw-bold mb-5">Nos Valeurs</h2>
+                <div class="row g-4">
+
+                    <!-- Valeur 1 : Innovation -->
+                    <!-- col-lg-3 : Affiche 4 éléments par ligne sur grand écran (12 colonnes / 3 = 4) -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <!-- d-flex flex-column align-items-center : Aligne et centre parfaitement l'icône, le titre et le paragraphe verticalement -->
+                        <div
+                            class="p-4 bg-body-tertiary rounded shadow-sm h-100 text-center bento-card d-flex flex-column align-items-center">
+                            <img src="https://img.icons8.com/?size=100&amp;id=46620&amp;format=png&amp;color=000000"
+                                class="mb-3 bento-icon" width="60" alt="Icône Innovation">
+                            <h3 class="h5 fw-bold text-capitalize">Innovation</h3>
+                            <p class="small text-muted mb-0">L'innovation pour nous c'est transformer le potentiel
+                                africain en opportunité concrète. On ne suit pas le changement, on le crée.</p>
+                        </div>
+                    </div>
+
+                    <!-- Valeur 2 : Accessibilité -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div
+                            class="p-4 bg-body-tertiary rounded shadow-sm h-100 text-center bento-card d-flex flex-column align-items-center">
+                            <img src="https://img.icons8.com/?size=100&amp;id=3B5MFjiD3reA&amp;format=png&amp;color=000000"
+                                class="mb-3 bento-icon" width="60" alt="Icône Accessibilité">
+                            <h3 class="h5 fw-bold text-capitalize">Accessibilité</h3>
+                            <p class="small text-muted mb-0">Chez AfriTalent, l'accessibilité c'est notre promesse :
+                                donner à chaque talent Africain, peu importe d'où il vient, les mêmes chances.</p>
+                        </div>
+                    </div>
+
+                    <!-- Valeur 3 : Communauté -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div
+                            class="p-4 bg-body-tertiary rounded shadow-sm h-100 text-center bento-card d-flex flex-column align-items-center">
+                            <img src="https://img.icons8.com/?size=100&amp;id=aUiThmwNs5sO&amp;format=png&amp;color=000000"
+                                class="mb-3 bento-icon" width="60" alt="Icône Communauté">
+                            <h3 class="h5 fw-bold text-capitalize">Communauté</h3>
+                            <p class="small text-muted mb-0">Le cœur de tout. On ne met pas juste des CV en ligne, on
+                                connecte des humains, des parcours, des ambitions.</p>
+                        </div>
+                    </div>
+
+                    <!-- Valeur 4 : Excellence -->
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div
+                            class="p-4 bg-body-tertiary rounded shadow-sm h-100 text-center bento-card d-flex flex-column align-items-center">
+                            <img src="https://img.icons8.com/?size=100&amp;id=112791&amp;format=png&amp;color=000000"
+                                class="mb-3 bento-icon" width="60" alt="Icône Excellence">
+                            <h3 class="h5 fw-bold text-capitalize">Excellence</h3>
+                            <p class="small text-muted mb-0">Nous visons les standards internationaux les plus élevés
+                                pour valoriser l'ingéniosité et la rigueur des experts du continent.</p>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-          </div> 
-        </div> 
-      </div> 
-    </section>
-  </main>
+        </section>
 
-  <footer class="text-center py-4 border-top style-footer"> 
-    <div class="container"> 
-      <p class="text-muted mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p> 
-    </div> 
-  </footer>
+        <!-- ------------------------------------------ -->
+        <!-- Section Statistiques                       -->
+        <!-- ------------------------------------------ -->
+        <section id="statistiques" class="py-5 bg-dark text-white stats-section">
+            <div class="container text-center">
+                <h2 class="fw-bold mb-5 text-primary">AfriTalent en chiffres</h2>
+                <div class="row g-4">
+                    <!-- data-target : Attribut personnalisé très judicieux. Il permet au script main.js de lire l'objectif de la valeur 
+                         et de déclencher une animation de compteur dynamique (ex: défilement de 0 à 1200) dès que la section apparaît à l'écran -->
+                    <div class="col-12 col-md-4">
+                        <div class="p-3">
+                            <h3 class="counter display-6 fw-bold text-primary" data-target="1200">+1200</h3>
+                            <p class="mb-0 text-white-50">Freelances</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="p-3">
+                            <h3 class="counter display-6 fw-bold text-primary" data-target="45">+45</h3>
+                            <p class="mb-0 text-white-50">Pays représentés</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="p-3">
+                            <h3 class="counter display-6 fw-bold text-primary" data-target="3800">+3800</h3>
+                            <p class="mb-0 text-white-50">Projets réalisés</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <button id="backToTop" class="btn btn-primary rounded-circle shadow" aria-label="Retour en haut">
-    <i class="bi bi-arrow-up"></i>
-  </button>
+    <!-- ========================================== -->
+    <!-- PIED DE PAGE (FOOTER)                      -->
+    <!-- ========================================== -->
+    <footer class="text-center py-4 border-top style-footer">
+        <div class="container">
+            <p class="text-muted mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p>
+        </div>
+    </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
-  <script src="js/main.js"></script> 
-</body> 
+    <!-- Bouton de retour en haut (Back to Top) 
+         Destiné à être configuré en CSS en 'position: fixed' et géré par JavaScript pour apparaître lors du défilement -->
+    <button id="backToTop" class="btn btn-primary rounded-circle shadow" aria-label="Retour en haut">
+        <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- ========================================== -->
+    <!-- SCRIPTS JAVASCRIPT                         -->
+    <!-- ========================================== -->
+    <!-- Script Bundle de Bootstrap (comprend Popper.js indispensable pour la gestion des dropdowns et du menu collapse) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Votre logique JavaScript personnalisée (compteurs de stats, écouteur pour le bouton de thème, bouton de retour en haut) -->
+    <script src="js/main.js"></script>
+</body>
+
 </html>

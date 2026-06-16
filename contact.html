@@ -1,148 +1,207 @@
-<!DOCTYPE html> 
-<html lang="fr" data-bs-theme="light"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>AfriTalent — Contact</title> 
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light">
 
-    <link rel="stylesheet" href="css/style.css"> 
+<head>
+  <!-- Configuration initiale de la page : encodage universel et gestion de l'affichage responsive sur mobile -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AfriTalent — Contact</title>
+
+  <!-- ---------------------------------------------------- -->
+  <!-- FEUILLES DE STYLE ET ARCHITECTURES (CSS)             -->
+  <!-- ---------------------------------------------------- -->
+  <!-- Bootstrap 5 : Architecture CSS principale pour la grille et la structure des formulaires -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons : Utilisé pour l'icône de lune/soleil et la flèche de retour en haut -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+  <!-- Google Fonts : Import de la police Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap"
+    rel="stylesheet">
+
+  <!-- Fichier CSS personnalisé (Gère vos variables de couleurs bleues et roses, les thèmes, etc.) -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
 
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-dark bg-dark"> 
-        <div class="container"> 
-            <a class="navbar-brand fw-bold text-uppercase tracking-wider" href="index.html">AfriTalent</a> 
-            
-            <button class="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navMenu" 
-                aria-controls="navMenu" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation"> 
-                <span class="navbar-toggler-icon"></span>
-            </button> 
+<body>
+  <!-- ==================================================== -->
+  <!-- BARRE DE NAVIGATION (NAVBAR FIXE)                   -->
+  <!-- ==================================================== -->
+  <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-dark bg-dark">
+    <div class="container">
+      <!-- Zone Logo AfriTalent -->
+      <a class="navbar-brand fw-bold text-uppercase tracking-wider neon-brand" href="index.html">
+        <span class="text-neon-blue">💙Afri</span><span class="text-neon-pink">Talent🧡</span>
+      </a>
 
-            <div class="collapse navbar-collapse" id="navMenu"> 
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-2"> 
-                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>  
-                    <li class="nav-item"><a class="nav-link active me-lg-2" href="contact.html">Contact</a></li> 
-                    
-                    <li class="nav-item me-2">
-                        <button id="themeToggle" class="btn btn-link nav-link text-white border-0 p-2" aria-label="Changer de thème">
-                            <i id="themeIcon" class="bi bi-sun-fill"></i>
-                        </button>
-                    </li>
+      <!-- Bouton Hamburger visible uniquement sur mobile et tablette -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+        aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-                    <li class="nav-item mt-2 mt-lg-0">
-                        <a href="freelances.html" class="btn btn-primary btn-sm px-3 rounded-pill">Rejoindre AfriTalent</a>
-                    </li>
-                </ul> 
-            </div>
-        </div> 
-    </nav> 
+      <!-- Menu de navigation rétractable -->
+      <div class="collapse navbar-collapse" id="navMenu">
+        <!-- .ms-auto : Pousse le menu vers la droite | .gap-2 : Espace les éléments du menu -->
+        <ul class="navbar-nav ms-auto align-items-center gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+          <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+          <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active me-2" href="contact.html">Contact</a></li>
 
-    <main style="padding-top: 90px;">
-        <div class="container my-5">
-            <h1 class="display-5 fw-bold mb-4">Contactez-nous</h1>
-          
-            <div class="row g-4">
-                <div class="col-md-7">
-                    <form id="contactForm" novalidate>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="nom" class="form-label">Nom</label>
-                                <input type="text" class="form-control" id="nom" required>
-                                <div class="error-message" id="error-nom">Le nom est requis</div>
-                            </div>
-                          
-                            <div class="col-md-6 mb-3">
-                                <label for="prenom" class="form-label">Prénom</label>
-                                <input type="text" class="form-control" id="prenom" required>
-                                <div class="error-message" id="error-prenom">Le prénom est requis</div>
-                            </div>
-                        </div>
+          <!-- Commutateur Light / Dark Mode -->
+          <li class="nav-item me-2">
+            <button id="themeToggle" class="btn btn-link nav-link text-white border-0 p-2"
+              aria-label="Changer de thème">
+              <i id="themeIcon" class="bi bi-sun-fill"></i>
+            </button>
+          </li>
 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                            <div class="error-message" id="error-email">Entrez un email valide</div>
-                        </div>
+          <!-- Bouton d'action à forte visibilité -->
+          <li class="nav-item mt-2 mt-lg-0">
+            <a href="freelances.html" class="btn btn-primary btn-sm px-3 rounded-pill">Rejoindre AfriTalent</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-                        <div class="mb-3">
-                            <label for="sujet" class="form-label">Sujet</label>
-                            <select class="form-select" id="sujet" required>
-                                <option value="">Choisissez un sujet</option>
-                                <option value="question">Question générale</option>
-                                <option value="support">Support technique</option>
-                                <option value="devis">Demande de devis</option>
-                                <option value="autre">Autre</option>
-                            </select>
-                            <div class="error-message" id="error-sujet">Veuillez choisir un sujet</div>
-                        </div>
+  <!-- ==================================================== -->
+  <!-- ZONE DE CONTENU PRINCIPAL                            -->
+  <!-- ==================================================== -->
+  <!-- padding-top: 90px empêche le contenu de glisser sous la navbar fixe -->
+  <main style="padding-top: 90px;">
+    <!-- .container : Centre le contenu horizontalement | .my-5 : Marges verticales externes de niveau 5 -->
+    <div class="container my-5">
+      <h1 class="display-5 fw-bold mb-4">Contactez-nous</h1>
 
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea class="form-control" id="message" rows="5" required></textarea>
-                            <div class="error-message" id="error-message">Le message doit contenir au moins 20 caractères</div>
-                        </div>
+      <!-- GRILLE PRINCIPALE (Formulaire à gauche, Carte info à droite) -->
+      <!-- .g-4 : Configure un espacement constant (gutters) entre les colonnes -->
+      <div class="row g-4">
 
-                        <button type="submit" class="btn btn-primary px-4">Envoyer</button>
-                        
-                        <div class="alert alert-success mt-3 success-message d-none" id="successMessage">
-                            Message envoyé avec succès ! Nous vous répondrons rapidement.
-                        </div>
-                    </form>
-                </div>
+        <!-- COLONNE GAUCHE : LE FORMULAIRE (Prend 7/12ème de la largeur sur écran moyen et large) -->
+        <div class="col-12 col-md-7">
+          <!-- novalidate : Désactive la validation HTML5 par défaut du navigateur pour laisser votre JS prendre le relais -->
+          <form id="contactForm" novalidate>
 
-                <div class="col-md-5">
-                    <div class="card border-0 shadow-sm service-card h-100">
-                        <div class="card-body p-4">
-                            <h5 class="card-title fw-bold mb-3">Informations de contact</h5>
-                            <p class="card-text text-secondary lh-lg">
-                                <strong>Email :</strong> contact@afritalent.com<br>
-                                <strong>Téléphone :</strong> +221 78 200 36 63<br>
-                                <strong>Adresse :</strong> Liberté 5/A<br>
-                                Dakar, SENEGAL
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <!-- Sous-grille imbriquée pour les champs Nom et Prénom -->
+            <div class="row">
+              <!-- .col-md-6 : Côte à côte sur grand écran, empilés verticalement sur mobile -->
+              <div class="col-12 col-md-6 mb-3">
+                <label for="nom" class="form-label">Nom</label>
+                <input type="text" class="form-control" id="nom" required>
+                <!-- Conteneur personnalisé pour injecter les erreurs de validation en JS -->
+                <div class="error-message" id="error-nom">Le nom est requis</div>
+              </div>
+
+              <div class="col-12 col-md-6 mb-3">
+                <label for="prenom" class="form-label">Prénom</label>
+                <input type="text" class="form-control" id="prenom" required>
+                <div class="error-message" id="error-prenom">Le prénom est requis</div>
+              </div>
             </div>
 
-            <div class="mt-5">
-                <h5 class="fw-bold mb-3">Nous trouver</h5>
-                <div class="ratio ratio-21x9 rounded shadow-sm overflow-hidden border">
-                    <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.2223849182393!2d-17.4542!3d14.7114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQyJzQxLjAiTiAxN8KwMjcnMTUuMSJX!5e0!3m2!1sfr!2ssn!4v1718375000000!5m2!1sfr!2ssn" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
-                </div>
+            <!-- Champ Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+              <div class="error-message" id="error-email">Entrez un email valide</div>
             </div>
+
+            <!-- Menu déroulant (Sujet) -->
+            <div class="mb-3">
+              <label for="sujet" class="form-label">Sujet</label>
+              <!-- .form-select : Classe spécifique Bootstrap pour styliser les éléments de sélection -->
+              <select class="form-select" id="sujet" required>
+                <option value="">Choisissez un sujet</option>
+                <option value="question">Question générale</option>
+                <option value="support">Support technique</option>
+                <option value="devis">Demande de devis</option>
+                <option value="autre">Autre</option>
+              </select>
+              <div class="error-message" id="error-sujet">Veuillez choisir un sujet</div>
+            </div>
+
+            <!-- Zone de texte (Message) -->
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <!-- rows="5" : Fixe la hauteur initiale de la zone de texte à 5 lignes -->
+              <textarea class="form-control" id="message" rows="5" required></textarea>
+              <div class="error-message" id="error-message">Le message doit contenir au moins 20 caractères</div>
+            </div>
+
+            <!-- Bouton d'envoi -->
+            <button type="submit" class="btn btn-primary px-4">Envoyer</button>
+
+            <!-- Bannière de confirmation d'envoi -->
+            <!-- .d-none : Masqué par défaut. Le script JS retirera cette classe pour l'afficher après validation -->
+            <div class="alert alert-success mt-3 success-message d-none" id="successMessage">
+              Message envoyé avec succès ! Nous vous répondrons rapidement.
+            </div>
+          </form>
         </div>
-    </main>
 
-    <footer class="text-center py-4 border-top style-footer"> 
-        <div class="container"> 
-            <p class="text-muted mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p> 
-        </div> 
-    </footer>
-     
-    <button id="backToTop" class="btn btn-primary rounded-circle shadow" aria-label="Retour en haut">
-        <i class="bi bi-arrow-up"></i>
-    </button>
+        <!-- COLONNE DROITE : CARTES DE COORDONNÉES (Prend 5/12ème de la largeur) -->
+        <div class="col-12 col-md-5">
+          <!-- .h-100 : Assure que la carte prend exactement la même hauteur verticale que le formulaire à gauche -->
+          <!-- .border-0 .shadow-sm : Retire les bordures brutes et applique une ombre légère moderne -->
+          <div class="card border-0 shadow-sm service-card h-100">
+            <div class="card-body p-4">
+              <h5 class="card-title fw-bold mb-3">Informations de contact</h5>
+              <!-- .lh-lg : Augmente l'espacement des lignes (Line-height Large) pour un confort de lecture optimal -->
+              <p class="card-text text-secondary lh-lg">
+                <strong>Email :</strong> contact@afritalent.com<br>
+                <strong>Téléphone :</strong> +221 78 200 36 63<br>
+                <strong>Adresse :</strong> Liberté 5/A<br>
+                Dakar, SENEGAL
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Fin de la rangée principale -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
-    <script src="js/main.js"></script> 
-</body> 
+      <!-- SECION CARTE GOOGLE MAPS -->
+      <div class="mt-5">
+        <h5 class="fw-bold mb-3">Nous trouver</h5>
+        <!-- .ratio .ratio-21x9 : Composant Bootstrap ultra-pratique pour rendre les iFrames parfaitement responsives -->
+        <!-- Il maintient automatiquement les proportions d'affichage sans déformer la carte sur mobile -->
+        <div class="ratio ratio-21x9 rounded shadow-sm overflow-hidden border">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3859.2223849182393!2d-17.4542!3d14.7114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDQyJzQxLjAiTiAxN8KwMjcnMTUuMSJX!5e0!3m2!1sfr!2ssn!4v1718375000000!5m2!1sfr!2ssn"
+            allowfullscreen="" loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================================================== -->
+  <!-- PIED DE PAGE & RETOUR EN HAUT                        -->
+  <!-- ==================================================== -->
+  <footer class="text-center py-4 border-top style-footer">
+    <div class="container">
+      <p class="text-muted mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <!-- Bouton flottant de retour rapide vers le haut (Géré de façon dynamique par le fichier JavaScript) -->
+  <button id="backToTop" class="btn btn-primary rounded-circle shadow" aria-label="Retour en haut">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <!-- ---------------------------------------------------- -->
+  <!-- SCRIPTS D'EXÉCUTION (JAVASCRIPT)                     -->
+  <!-- ---------------------------------------------------- -->
+  <!-- Bundle Bootstrap : Comprend Popper.js (Indispensable si vous ajoutez des menus déroulants ou des tooltips) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Logique JavaScript applicative : Contrôle du Dark Mode, de la validation du formulaire et du défilement haut -->
+  <script src="js/main.js"></script>
+</body>
+
 </html>

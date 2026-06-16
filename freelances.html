@@ -1,62 +1,96 @@
-<!DOCTYPE html> 
-<html lang="fr" data-bs-theme="light"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>AfriTalent — Freelances</title> 
-    
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> 
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AfriTalent — Freelances</title>
+
+    <!-- ---------------------------------------------------- -->
+    <!-- IMPORTS DES FEUILLES DE STYLE (CSS)                  -->
+    <!-- ---------------------------------------------------- -->
+    <!-- Bootstrap 5 : Framework CSS principal pour la mise en page responsive -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons : Bibliothèque d'icônes officielles (ex: étoiles, soleil...) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts : Importation de la police d'écriture "Plus Jakarta Sans" -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700&display=swap"
+        rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css"> 
+    <!-- CSS Personnalisé : Vos propres règles de style (couleurs néon, ajustements, etc.) -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body> 
 
-    <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-dark bg-dark"> 
-        <div class="container"> 
-            <a class="navbar-brand fw-bold text-uppercase tracking-wider" href="index.html">AfriTalent</a> 
-            
-            <button class="navbar-toggler" type="button" 
-                data-bs-toggle="collapse" 
-                data-bs-target="#navMenu" 
-                aria-controls="navMenu" 
-                aria-expanded="false" 
-                aria-label="Toggle navigation"> 
+<body>
+
+    <!-- ==================================================== -->
+    <!-- BARRE DE NAVIGATION (NAVBAR)                         -->
+    <!-- ==================================================== -->
+    <!-- fixed-top : Bloque la barre en haut de l'écran lors du défilement -->
+    <!-- navbar-expand-lg : Mode bureau sur grand écran, menu accordéon (hamburger) sur mobile -->
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar navbar-dark bg-dark">
+        <div class="container">
+
+            <!-- LOGO : Zone de la marque avec l'effet de texte Néon -->
+            <a class="navbar-brand fw-bold text-uppercase tracking-wider neon-brand" href="index.html">
+                <span class="text-neon-blue">💙Afri</span><span class="text-neon-pink">Talent🧡</span>
+            </a>
+
+            <!-- BOUTON HAMBURGER : S'affiche uniquement sur mobile et tablette pour ouvrir le menu -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-            </button> 
+            </button>
 
-            <div class="collapse navbar-collapse" id="navMenu"> 
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-2"> 
-                    <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li> 
-                    <li class="nav-item"><a class="nav-link active" href="freelances.html">Freelances</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>  
-                    <li class="nav-item"><a class="nav-link me-lg-2" href="contact.html">Contact</a></li> 
-                    
+            <!-- CONTENU DU MENU : Contient les liens de navigation et les boutons d'action -->
+            <div class="collapse navbar-collapse" id="navMenu">
+                <!-- ms-auto : Pousse le menu vers la droite de l'écran -->
+                <!-- gap-2 : Crée un espace régulier de 8px entre chaque élément du menu -->
+                <ul class="navbar-nav ms-auto align-items-center gap-2">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="freelances.html">Freelances</a></li>
+                    <li class="nav-item"><a class="nav-link" href="tarifs.html">Tarifs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">À propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link me-2" href="contact.html">Contact</a></li>
+
+                    <!-- TOGGLE THEME : Bouton permettant de basculer entre le Mode Sombre et Lumineux -->
                     <li class="nav-item me-2">
-                        <button id="themeToggle" class="btn btn-link nav-link text-white border-0 p-2" aria-label="Changer de thème">
+                        <button id="themeToggle" class="btn btn-link nav-link text-white border-0 p-2"
+                            aria-label="Changer de thème">
                             <i id="themeIcon" class="bi bi-sun-fill"></i>
                         </button>
                     </li>
 
+                    <!-- BOUTON D'APPEL À L'ACTION (CTA) : Bouton principal pour l'inscription -->
                     <li class="nav-item mt-2 mt-lg-0">
-                        <a href="freelances.html" class="btn btn-primary btn-sm px-3 rounded-pill">Rejoindre AfriTalent</a>
+                        <a href="freelances.html" class="btn btn-primary btn-sm px-3 rounded-pill">Rejoindre
+                            AfriTalent</a>
                     </li>
-                </ul> 
+                </ul>
             </div>
-        </div> 
-    </nav> 
+        </div>
+    </nav>
 
+    <!-- ==================================================== -->
+    <!-- CONTENU PRINCIPAL (MAIN)                             -->
+    <!-- ==================================================== -->
+    <!-- padding-top: 90px évite que le contenu passe sous la barre de navigation fixe -->
     <main style="padding-top: 90px;">
         <div class="container py-4 main-content">
+
+            <!-- TITRE PRINCIPAL -->
             <h1 class="mb-4 text-center fw-bold display-6">Catalogue de freelances</h1>
 
+            <!-- ZONE DE FILTRAGE -->
+            <!-- d-flex flex-column flex-sm-row : Aligné verticalement sur mobile, horizontalement sur écran plus grand -->
             <div class="mb-5 d-flex flex-column flex-sm-row align-items-sm-center gap-2 max-width-filter">
                 <label for="filtreCategorie" class="form-label mb-0 fw-medium">Filtrer par catégorie :</label>
+                <!-- select : Déclenchera le script JavaScript (main.js) pour filtrer les cartes -->
                 <select id="filtreCategorie" class="form-select filter-select">
                     <option value="all">Toutes</option>
                     <option value="developpeur">Développeur</option>
@@ -65,185 +99,304 @@
                 </select>
             </div>
 
+            <!-- GRILLE DES CARTES FREELANCES -->
+            <!-- row g-4 : Crée une grille Bootstrap avec un espacement (gutter) constant entre les cartes -->
             <div class="row g-4" id="freelanceGrid">
 
+                <!-- ---------------------------------------------------- -->
+                <!-- PROFIL 1 : DÉVELOPPEUR (Aïcha Diallo)                -->
+                <!-- ---------------------------------------------------- -->
+                <!-- col-12 col-md-6 col-lg-4 : 1 colonne sur mobile, 2 sur tablette, 3 sur PC -->
+                <!-- data-category : Attribut personnalisé lu par le JS pour le système de filtre -->
                 <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="developpeur">
+                    <!-- h-100 : Force toutes les cartes à avoir exactement la même hauteur dans la grille -->
                     <div class="card h-100 shadow-sm border-0 profile-card service-card">
+                        <!-- Enveloppe pour gérer le ratio et le zoom de la photo de profil -->
                         <div class="card-img-wrapper">
-                            <img src="https://storage.letudiant.fr/mediatheque/letudiant/9/5/2979195-developpeur-ia-632x421.webp" class="card-img-top" alt="Aïcha Diallo">
+                            <img src="https://storage.letudiant.fr/mediatheque/letudiant/9/5/2979195-developpeur-ia-632x421.webp"
+                                class="card-img-top" alt="Portrait de Aïcha Diallo">
                         </div>
+                        <!-- d-flex flex-column : Structure le corps de la carte verticalement -->
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold mb-1">Aïcha Diallo</h5>
-                            <h6 class="card-subtitle mb-3 text-primary">Développeur</h6>
-                            <p class="card-text text-muted small flex-grow-1">Le développeur en intelligence artificielle conçoit des programmes capables de simuler l’intelligence humaine pour résoudre des problèmes concrets.</p>
+                            <h6 class="card-subtitle mb-3 text-primary">Développeuse IA</h6>
+                            <!-- flex-grow-1 : Pousse le pied de la carte vers le bas, alignant ainsi les boutons -->
+                            <p class="card-text text-muted small flex-grow-1">Le développeur en intelligence
+                                artificielle conçoit des programmes capables de simuler l’intelligence humaine pour
+                                résoudre des problèmes concrets.</p>
+
+                            <!-- Pied de la carte : Tarif et Évaluation -->
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-body">35€/h</span>
-                                <span class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-muted ms-1">4.2</span></span>
+                                <!-- Note sous forme d'étoiles avec accessibilité numérique pour les lecteurs d'écran -->
+                                <span class="text-warning small" aria-label="Note de 4.2 sur 5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-half"></i>
+                                    <span class="text-muted ms-1">4.2</span>
+                                </span>
                             </div>
                             <a href="#" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Voir le profil</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ---------------------------------------------------- -->
+                <!-- PROFIL 2 : DESIGNER (Gabriel Fabre)                  -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="designer">
                     <div class="card h-100 shadow-sm border-0 profile-card service-card">
                         <div class="card-img-wrapper">
-                            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/FxRhbHl2W6QjuM5ef3QJi/8769f9cb620914f4e9211b4d54385ce0/ux-designer.jpeg?w=1000" class="card-img-top" alt="Gabriel Fabre">
+                            <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/FxRhbHl2W6QjuM5ef3QJi/8769f9cb620914f4e9211b4d54385ce0/ux-designer.jpeg?w=1000"
+                                class="card-img-top" alt="Portrait de Gabriel Fabre">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold mb-1">Gabriel Fabre</h5>
-                            <h6 class="card-subtitle mb-3 text-primary">Designer</h6>
-                            <p class="card-text text-muted small flex-grow-1">Les UX designers cherchent à créer des produits et des services ressentis comme faciles, efficaces et agréables à utiliser.</p>
+                            <h6 class="card-subtitle mb-3 text-primary">UX Designer</h6>
+                            <p class="card-text text-muted small flex-grow-1">Les UX designers cherchent à créer des
+                                produits et des services ressentis comme faciles, efficaces et agréables à utiliser.</p>
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-body">40€/h</span>
-                                <span class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> <span class="text-muted ms-1">4.8</span></span>
+                                <span class="text-warning small" aria-label="Note de 4.8 sur 5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i>
+                                    <span class="text-muted ms-1">4.8</span>
+                                </span>
                             </div>
                             <a href="#" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Voir le profil</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ---------------------------------------------------- -->
+                <!-- PROFIL 3 : RÉDACTEUR (Noah Lopez)                    -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="redacteur">
                     <div class="card h-100 shadow-sm border-0 profile-card service-card">
                         <div class="card-img-wrapper">
-                            <img src="https://www.onisep.fr/var/onisep/storage/images/_aliases/dso_grid_8_columns/4/4/6/4/9564644-8-fre-FR/cc2501878ae8-redacteur-en-chef.jpg.webp" class="card-img-top" alt="Noah Lopez">
+                            <img src="https://www.onisep.fr/var/onisep/storage/images/_aliases/dso_grid_8_columns/4/4/6/4/9564644-8-fre-FR/cc2501878ae8-redacteur-en-chef.jpg.webp"
+                                class="card-img-top" alt="Portrait de Noah Lopez">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold mb-1">Noah Lopez</h5>
-                            <h6 class="card-subtitle mb-3 text-primary">Rédacteur</h6>
-                            <p class="card-text text-muted small flex-grow-1">Au sein d'un média ou d'un site web d'information, il définit et valide les sujets à traiter. Toute idée d'article lui est obligatoirement soumise.</p>
+                            <h6 class="card-subtitle mb-3 text-primary">Rédacteur en Chef</h6>
+                            <p class="card-text text-muted small flex-grow-1">Au sein d'un média ou d'un site web
+                                d'information, il définit et valide les sujets à traiter. Toute idée d'article lui est
+                                obligatoirement soumise.</p>
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-body">30€/h</span>
-                                <span class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i class="bi bi-star"></i> <span class="text-muted ms-1">3.9</span></span>
+                                <span class="text-warning small" aria-label="Note de 3.9 sur 5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-half"></i><i
+                                        class="bi bi-star"></i>
+                                    <span class="text-muted ms-1">3.9</span>
+                                </span>
                             </div>
                             <a href="#" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Voir le profil</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ---------------------------------------------------- -->
+                <!-- PROFIL 4 : DÉVELOPPEUR (Omar Sy)                     -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="developpeur">
                     <div class="card h-100 shadow-sm border-0 profile-card service-card">
                         <div class="card-img-wrapper">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJJ46RoTluUJCE9wQLWag1gOT8_N-n3DOqXA&s" class="card-img-top" alt="Omar Sy">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJJ46RoTluUJCE9wQLWag1gOT8_N-n3DOqXA&s"
+                                class="card-img-top" alt="Portrait de Omar Sy">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold mb-1">Omar Sy</h5>
-                            <h6 class="card-subtitle mb-3 text-primary">Développeur</h6>
-                            <p class="card-text text-muted small flex-grow-1">Maîtrise complète des langages modernes (JavaScript, Python, Java) et des bases de données relationnelles. Réalise une veille technologique poussée sur l'IA.</p>
+                            <h6 class="card-subtitle mb-3 text-primary">Développeur Fullstack</h6>
+                            <p class="card-text text-muted small flex-grow-1">Maîtrise complète des langages modernes
+                                (JavaScript, Python, Java) et des bases de données relationnelles. Réalise une veille
+                                technologique poussée sur l'IA.</p>
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-body">45€/h</span>
-                                <span class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-muted ms-1">4.5</span></span>
+                                <span class="text-warning small" aria-label="Note de 4.5 sur 5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-half"></i>
+                                    <span class="text-muted ms-1">4.5</span>
+                                </span>
                             </div>
                             <a href="#" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Voir le profil</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ---------------------------------------------------- -->
+                <!-- PROFIL 5 : DESIGNER (Aminata Aidara)                 -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="designer">
                     <div class="card h-100 shadow-sm border-0 profile-card service-card">
                         <div class="card-img-wrapper">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfIv-nSj475bzUyDA3rz0EUDajGQz6HJjw2A&s" class="card-img-top" alt="Aminata Aidara">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfIv-nSj475bzUyDA3rz0EUDajGQz6HJjw2A&s"
+                                class="card-img-top" alt="Portrait de Aminata Aidara">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold mb-1">Aminata Aidara</h5>
-                            <h6 class="card-subtitle mb-3 text-primary">Designer</h6>
-                            <p class="card-text text-muted small flex-grow-1">Création d'univers graphiques complets : logos, chartes de marque, identités visuelles et supports print stratégiques pour les startups en croissance.</p>
+                            <h6 class="card-subtitle mb-3 text-primary">Brand Designer</h6>
+                            <p class="card-text text-muted small flex-grow-1">Création d'univers graphiques complets :
+                                logos, chartes de marque, identités visuelles et supports print stratégiques pour les
+                                startups en croissance.</p>
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-body">28€/h</span>
-                                <span class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> <span class="text-muted ms-1">4.3</span></span>
+                                <span class="text-warning small" aria-label="Note de 4.3 sur 5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <span class="text-muted ms-1">4.3</span>
+                                </span>
                             </div>
                             <a href="#" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Voir le profil</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ---------------------------------------------------- -->
+                <!-- PROFIL 6 : RÉDACTEUR (Ibrahim Diop)                  -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="redacteur">
                     <div class="card h-100 shadow-sm border-0 profile-card service-card">
                         <div class="card-img-wrapper">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCph1F8EwQVNFsOZ6CVmaxUKu9yYK0xvl6MA&s" class="card-img-top" alt="Ibrahim Diop">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCph1F8EwQVNFsOZ6CVmaxUKu9yYK0xvl6MA&s"
+                                class="card-img-top" alt="Portrait de Ibrahim Diop">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold mb-1">Ibrahim Diop</h5>
-                            <h6 class="card-subtitle mb-3 text-primary">Rédacteur</h6>
-                            <p class="card-text text-muted small flex-grow-1">Production d'articles à forte valeur ajoutée optimisés pour le référencement naturel en FR/EN. Plus de 50 sites propulsés dans le top 3 Google.</p>
+                            <h6 class="card-subtitle mb-3 text-primary">Rédacteur SEO</h6>
+                            <p class="card-text text-muted small flex-grow-1">Production d'articles à forte valeur
+                                ajoutée optimisés pour le référencement naturel en FR/EN. Plus de 50 sites propulsés
+                                dans le top 3 Google.</p>
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-body">25€/h</span>
-                                <span class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-muted ms-1">4.7</span></span>
+                                <span class="text-warning small" aria-label="Note de 4.7 sur 5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-half"></i>
+                                    <span class="text-muted ms-1">4.7</span>
+                                </span>
                             </div>
                             <a href="#" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Voir le profil</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ---------------------------------------------------- -->
+                <!-- PROFIL 7 : DÉVELOPPEUR (Léa Kouassi)                 -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="developpeur">
                     <div class="card h-100 shadow-sm border-0 profile-card service-card">
                         <div class="card-img-wrapper">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTrs6WXaSCEh_XUE1tz10WiqoxvgSG_M2a8g&s" class="card-img-top" alt="Léa Kouassi">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTrs6WXaSCEh_XUE1tz10WiqoxvgSG_M2a8g&s"
+                                class="card-img-top" alt="Portrait de Léa Kouassi">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold mb-1">Léa Kouassi</h5>
-                            <h6 class="card-subtitle mb-3 text-primary">Devellopeur</h6>
-                            <p class="card-text text-muted small flex-grow-1">Traitement de flux complexes, conception de tableaux de bord interactifs (Power BI/Tableau) et scripts d'automatisation sur-mesure.</p>
+                            <h6 class="card-subtitle mb-3 text-primary">Développeuse Data</h6>
+                            <p class="card-text text-muted small flex-grow-1">Traitement de flux complexes, conception
+                                de tableaux de bord interactifs (Power BI/Tableau) et scripts d'automatisation
+                                sur-mesure.</p>
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-body">50€/h</span>
-                                <span class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-muted ms-1">4.6</span></span>
+                                <span class="text-warning small" aria-label="Note de 4.6 sur 5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-half"></i>
+                                    <span class="text-muted ms-1">4.6</span>
+                                </span>
                             </div>
                             <a href="#" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Voir le profil</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ---------------------------------------------------- -->
+                <!-- PROFIL 8 : DESIGNER (Karim Faye)                     -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="designer">
                     <div class="card h-100 shadow-sm border-0 profile-card service-card">
                         <div class="card-img-wrapper">
-                            <img src="https://i.pinimg.com/1200x/c3/65/b8/c365b8a560418cf02dda44994d809d60.jpg" class="card-img-top" alt="Karim Faye">
+                            <img src="https://i.pinimg.com/1200x/c3/65/b8/c365b8a560418cf02dda44994d809d60.jpg"
+                                class="card-img-top" alt="Portrait de Karim Faye">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold mb-1">Karim Faye</h5>
-                            <h6 class="card-subtitle mb-3 text-primary">Designer</h6>
-                            <p class="card-text text-muted small flex-grow-1">Création d'animations vectorielles 2D, de vidéos explicatives dynamiques et de montages d'effets spéciaux avancés via After Effects.</p>
+                            <h6 class="card-subtitle mb-3 text-primary">Motion Designer</h6>
+                            <p class="card-text text-muted small flex-grow-1">Création d'animations vectorielles 2D, de
+                                vidéos explicatives dynamiques et de montages d'effets spéciaux avancés via After
+                                Effects.</p>
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-body">38€/h</span>
-                                <span class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <span class="text-muted ms-1">4.4</span></span>
+                                <span class="text-warning small" aria-label="Note de 4.4 sur 5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-half"></i>
+                                    <span class="text-muted ms-1">4.4</span>
+                                </span>
                             </div>
                             <a href="#" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Voir le profil</a>
                         </div>
                     </div>
                 </div>
 
+                <!-- ---------------------------------------------------- -->
+                <!-- PROFIL 9 : RÉDACTEUR (Salimata Ba)                   -->
+                <!-- ---------------------------------------------------- -->
                 <div class="col-12 col-md-6 col-lg-4 freelance-card" data-category="redacteur">
                     <div class="card h-100 shadow-sm border-0 profile-card service-card">
                         <div class="card-img-wrapper">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXowjnGZQcVJQsUhsiR6p-rkxkuNYGwmMJ8g&s" class="card-img-top" alt="Salimata Ba">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXowjnGZQcVJQsUhsiR6p-rkxkuNYGwmMJ8g&s"
+                                class="card-img-top" alt="Portrait de Salimata Ba">
                         </div>
                         <div class="card-body d-flex flex-column">
                             <h5 class="card-title fw-bold mb-1">Salimata Ba</h5>
-                            <h6 class="card-subtitle mb-3 text-primary">Rédactrice</h6>
-                            <p class="card-text text-muted small flex-grow-1">Animation d'équipes de rédacteurs, élaboration de stratégies éditoriales cross-canal pour le web, la presse d'entreprise et les newsletters de marque.</p>
+                            <h6 class="card-subtitle mb-3 text-primary">Rédactrice & Content Manager</h6>
+                            <p class="card-text text-muted small flex-grow-1">Animation d'équipes de rédacteurs,
+                                élaboration de stratégies éditoriales cross-canal pour le web, la presse d'entreprise et
+                                les newsletters de marque.</p>
                             <div class="mt-3 pt-3 border-top d-flex justify-content-between align-items-center">
                                 <span class="fw-bold text-body">22€/h</span>
-                                <span class="text-warning small"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i> <span class="text-muted ms-1">4.1</span></span>
+                                <span class="text-warning small" aria-label="Note de 4.1 sur 5">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                        class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>
+                                    <span class="text-muted ms-1">4.1</span>
+                                </span>
                             </div>
                             <a href="#" class="btn btn-outline-primary w-100 mt-3 rounded-pill">Voir le profil</a>
                         </div>
                     </div>
                 </div>
 
-            </div>
+            </div> <!-- Fin de la grille freelanceGrid -->
         </div>
     </main>
 
-    <footer class="text-center py-4 border-top style-footer"> 
-        <div class="container"> 
-            <p class="text-muted mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p> 
-        </div> 
+    <!-- ==================================================== -->
+    <!-- PIED DE PAGE (FOOTER)                                -->
+    <!-- ==================================================== -->
+    <footer class="text-center py-4 border-top style-footer">
+        <div class="container">
+            <p class="text-muted mb-0">&copy; 2026 AfriTalent. Tous droits réservés.</p>
+        </div>
     </footer>
-     
+
+    <!-- BOUTON RETOUR EN HAUT (BACK TO TOP) -->
+    <!-- Positionné de manière absolue/fixe via le CSS en bas à droite de l'écran -->
     <button id="backToTop" class="btn btn-primary rounded-circle shadow" aria-label="Retour en haut">
         <i class="bi bi-arrow-up"></i>
     </button>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> 
-    <script src="js/main.js"></script> 
-</body> 
+    <!-- ==================================================== -->
+    <!-- IMPORTS DES SCRIPTS (JAVASCRIPT)                     -->
+    <!-- ==================================================== -->
+    <!-- Bootstrap Bundle : Contient Popper.js, indispensable pour faire fonctionner le menu déroulant mobile -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script principal du projet : Contient la logique de filtrage et le switch dark/light mode -->
+    <script src="js/main.js"></script>
+</body>
+
 </html>
