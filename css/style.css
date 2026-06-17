@@ -68,12 +68,12 @@ body {
 
 /* Optionnel : Effet au survol */
 .neon-brand:hover .text-neon-blue {
-    text-shadow: 0 0 12px #b98da7, 0 0 25px #b98da7;
+    text-shadow: 0 0 12px #0000f1, 0 0 25px #ffffff;
     transition: all 0.3s ease;
 }
 
 .neon-brand:hover .text-neon-pink {
-    text-shadow: 0 0 12px #e378ec, 0 0 25px #e378ec;
+    text-shadow: 0 0 12px #f8930f, 0 0 25px #ffffff;
     transition: all 0.3s ease;
 }
 
@@ -144,7 +144,7 @@ img {
 /* --- Section Hero Asymétrique --- */
 .text-gradient {
     background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
-    -webkit-background-clip: text;
+   background-clip: text;
     -webkit-text-fill-color: transparent;
     /* Permet d'appliquer le dégradé sur le texte */
 }
